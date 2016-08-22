@@ -13,6 +13,7 @@ public abstract class WfMSApi {
     public WfMSApi(String se, String d) {
         sutEndpoint = se;
         deployAPI = sutEndpoint + d;
+        logger.info("[WfMSApi] Deploy API set to: " + deployAPI);
     }
 
     public abstract Map<String, String> deploy(File model) throws IOException;
